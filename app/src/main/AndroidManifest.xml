@@ -9,13 +9,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".MainActivity"
-                  android:launchMode="singleTop">
+                  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SingleTaskActivity"
+                  android:launchMode="singleTask"
+                  android:taskAffinity="chenglang.singletask"
+            />
+        <activity android:name=".singleTask2"
+            android:launchMode="singleTask"
+            >
+
+        </activity>
+        <activity android:name=".SingleInstance"
+            android:taskAffinity="chenglang.singleInstance"
+            android:launchMode="singleInstance">
+        </activity>
+
+        <activity android:name=".singTop"
+            android:launchMode="singleTop">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
