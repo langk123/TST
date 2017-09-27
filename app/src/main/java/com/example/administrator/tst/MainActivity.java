@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     String tag= this.getClass().getName();
     @Override
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setAction("chenglang");
-                String string = "content://www.baidu.com:80/gkjkpdf";
+                String string = "content://www.baidu.com:80/gkpdf";
                 intent.setDataAndType(Uri.parse(string),"text/plain");
                 Log.i(tag,string);
                 startActivity(intent);
